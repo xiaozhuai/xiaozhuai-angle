@@ -104,7 +104,6 @@ EXPORTS
   EGL_SurfaceAttrib
   EGL_SwapBuffers
   EGL_SwapBuffersWithDamageKHR
-  EGL_SwapBuffersWithFrameTokenANGLE
   EGL_SwapInterval
   EGL_Terminate
   EGL_UnlockSurfaceKHR
@@ -315,7 +314,6 @@ EXPORTS
   GL_EGLImageTargetRenderbufferStorageOES
   GL_EGLImageTargetTexStorageEXT
   GL_EGLImageTargetTexture2DOES
-  GL_EGLImageTargetTextureStorageEXT
   GL_Enable
   GL_EnableClientState
   GL_EnableVertexAttribArray
@@ -351,6 +349,7 @@ EXPORTS
   GL_FramebufferPixelLocalStorageRestoreANGLE
   GL_FramebufferRenderbuffer
   GL_FramebufferRenderbufferOES
+  GL_FramebufferShadingRateEXT
   GL_FramebufferTexture
   GL_FramebufferTexture2D
   GL_FramebufferTexture2DMultisampleEXT
@@ -358,6 +357,7 @@ EXPORTS
   GL_FramebufferTexture3DOES
   GL_FramebufferTextureEXT
   GL_FramebufferTextureLayer
+  GL_FramebufferTextureMultisampleMultiviewOVR
   GL_FramebufferTextureMultiviewOVR
   GL_FramebufferTextureOES
   GL_FramebufferTexturePixelLocalStorageANGLE
@@ -414,6 +414,7 @@ EXPORTS
   GL_GetFloatvRobustANGLE
   GL_GetFragDataIndexEXT
   GL_GetFragDataLocation
+  GL_GetFragmentShadingRatesEXT
   GL_GetFramebufferAttachmentParameteriv
   GL_GetFramebufferAttachmentParameterivOES
   GL_GetFramebufferAttachmentParameterivRobustANGLE
@@ -644,17 +645,18 @@ EXPORTS
   GL_MultMatrixf
   GL_MultMatrixx
   GL_MultiDrawArraysANGLE
+  GL_MultiDrawArraysEXT
   GL_MultiDrawArraysIndirectEXT
   GL_MultiDrawArraysInstancedANGLE
   GL_MultiDrawArraysInstancedBaseInstanceANGLE
   GL_MultiDrawElementsANGLE
   GL_MultiDrawElementsBaseVertexEXT
+  GL_MultiDrawElementsEXT
   GL_MultiDrawElementsIndirectEXT
   GL_MultiDrawElementsInstancedANGLE
   GL_MultiDrawElementsInstancedBaseVertexBaseInstanceANGLE
   GL_MultiTexCoord4f
   GL_MultiTexCoord4x
-  GL_NamedBufferStorageExternalEXT
   GL_Normal3f
   GL_Normal3x
   GL_NormalPointer
@@ -811,6 +813,8 @@ EXPORTS
   GL_ShadeModel
   GL_ShaderBinary
   GL_ShaderSource
+  GL_ShadingRateCombinerOpsEXT
+  GL_ShadingRateEXT
   GL_ShadingRateQCOM
   GL_SignalSemaphoreEXT
   GL_StartTilingQCOM
@@ -862,7 +866,6 @@ EXPORTS
   GL_TexParameterivRobustANGLE
   GL_TexParameterx
   GL_TexParameterxv
-  GL_TexStorage1DEXT
   GL_TexStorage2D
   GL_TexStorage2DEXT
   GL_TexStorage2DMultisample
@@ -1158,7 +1161,6 @@ EXPORTS
   glEGLImageTargetRenderbufferStorageOES
   glEGLImageTargetTexStorageEXT
   glEGLImageTargetTexture2DOES
-  glEGLImageTargetTextureStorageEXT
   glEnable
   glEnableClientState
   glEnableVertexAttribArray
@@ -1194,6 +1196,7 @@ EXPORTS
   glFramebufferPixelLocalStorageRestoreANGLE
   glFramebufferRenderbuffer
   glFramebufferRenderbufferOES
+  glFramebufferShadingRateEXT
   glFramebufferTexture
   glFramebufferTexture2D
   glFramebufferTexture2DMultisampleEXT
@@ -1201,6 +1204,7 @@ EXPORTS
   glFramebufferTexture3DOES
   glFramebufferTextureEXT
   glFramebufferTextureLayer
+  glFramebufferTextureMultisampleMultiviewOVR
   glFramebufferTextureMultiviewOVR
   glFramebufferTextureOES
   glFramebufferTexturePixelLocalStorageANGLE
@@ -1257,6 +1261,7 @@ EXPORTS
   glGetFloatvRobustANGLE
   glGetFragDataIndexEXT
   glGetFragDataLocation
+  glGetFragmentShadingRatesEXT
   glGetFramebufferAttachmentParameteriv
   glGetFramebufferAttachmentParameterivOES
   glGetFramebufferAttachmentParameterivRobustANGLE
@@ -1487,17 +1492,18 @@ EXPORTS
   glMultMatrixf
   glMultMatrixx
   glMultiDrawArraysANGLE
+  glMultiDrawArraysEXT
   glMultiDrawArraysIndirectEXT
   glMultiDrawArraysInstancedANGLE
   glMultiDrawArraysInstancedBaseInstanceANGLE
   glMultiDrawElementsANGLE
   glMultiDrawElementsBaseVertexEXT
+  glMultiDrawElementsEXT
   glMultiDrawElementsIndirectEXT
   glMultiDrawElementsInstancedANGLE
   glMultiDrawElementsInstancedBaseVertexBaseInstanceANGLE
   glMultiTexCoord4f
   glMultiTexCoord4x
-  glNamedBufferStorageExternalEXT
   glNormal3f
   glNormal3x
   glNormalPointer
@@ -1654,6 +1660,8 @@ EXPORTS
   glShadeModel
   glShaderBinary
   glShaderSource
+  glShadingRateCombinerOpsEXT
+  glShadingRateEXT
   glShadingRateQCOM
   glSignalSemaphoreEXT
   glStartTilingQCOM
@@ -1705,7 +1713,6 @@ EXPORTS
   glTexParameterivRobustANGLE
   glTexParameterx
   glTexParameterxv
-  glTexStorage1DEXT
   glTexStorage2D
   glTexStorage2DEXT
   glTexStorage2DMultisample
