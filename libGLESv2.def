@@ -322,6 +322,7 @@ EXPORTS
   GL_EnableiOES
   GL_EndPerfMonitorAMD
   GL_EndPixelLocalStorageANGLE
+  GL_EndPixelLocalStorageImplicitANGLE
   GL_EndQuery
   GL_EndQueryEXT
   GL_EndTilingQCOM
@@ -392,7 +393,6 @@ EXPORTS
   GL_GetAttachedShaders
   GL_GetAttribLocation
   GL_GetBooleani_v
-  GL_GetBooleani_vRobustANGLE
   GL_GetBooleanv
   GL_GetBooleanvRobustANGLE
   GL_GetBufferParameteri64v
@@ -420,11 +420,12 @@ EXPORTS
   GL_GetFramebufferAttachmentParameterivRobustANGLE
   GL_GetFramebufferParameteriv
   GL_GetFramebufferParameterivMESA
-  GL_GetFramebufferParameterivRobustANGLE
   GL_GetFramebufferPixelLocalStorageParameterfvANGLE
   GL_GetFramebufferPixelLocalStorageParameterfvRobustANGLE
   GL_GetFramebufferPixelLocalStorageParameterivANGLE
   GL_GetFramebufferPixelLocalStorageParameterivRobustANGLE
+  GL_GetFramebufferPixelLocalStorageParameteruivANGLE
+  GL_GetFramebufferPixelLocalStorageParameteruivRobustANGLE
   GL_GetGraphicsResetStatus
   GL_GetGraphicsResetStatusEXT
   GL_GetGraphicsResetStatusKHR
@@ -461,12 +462,10 @@ EXPORTS
   GL_GetPointerv
   GL_GetPointervANGLE
   GL_GetPointervKHR
-  GL_GetPointervRobustANGLERobustANGLE
   GL_GetProgramBinary
   GL_GetProgramBinaryOES
   GL_GetProgramInfoLog
   GL_GetProgramInterfaceiv
-  GL_GetProgramInterfaceivRobustANGLE
   GL_GetProgramPipelineInfoLog
   GL_GetProgramPipelineInfoLogEXT
   GL_GetProgramPipelineiv
@@ -497,11 +496,9 @@ EXPORTS
   GL_GetSamplerParameterIiv
   GL_GetSamplerParameterIivEXT
   GL_GetSamplerParameterIivOES
-  GL_GetSamplerParameterIivRobustANGLE
   GL_GetSamplerParameterIuiv
   GL_GetSamplerParameterIuivEXT
   GL_GetSamplerParameterIuivOES
-  GL_GetSamplerParameterIuivRobustANGLE
   GL_GetSamplerParameterfv
   GL_GetSamplerParameterfvRobustANGLE
   GL_GetSamplerParameteriv
@@ -531,11 +528,9 @@ EXPORTS
   GL_GetTexParameterIiv
   GL_GetTexParameterIivEXT
   GL_GetTexParameterIivOES
-  GL_GetTexParameterIivRobustANGLE
   GL_GetTexParameterIuiv
   GL_GetTexParameterIuivEXT
   GL_GetTexParameterIuivOES
-  GL_GetTexParameterIuivRobustANGLE
   GL_GetTexParameterfv
   GL_GetTexParameterfvRobustANGLE
   GL_GetTexParameteriv
@@ -567,14 +562,11 @@ EXPORTS
   GL_GetnUniformfv
   GL_GetnUniformfvEXT
   GL_GetnUniformfvKHR
-  GL_GetnUniformfvRobustANGLE
   GL_GetnUniformiv
   GL_GetnUniformivEXT
   GL_GetnUniformivKHR
-  GL_GetnUniformivRobustANGLE
   GL_GetnUniformuiv
   GL_GetnUniformuivKHR
-  GL_GetnUniformuivRobustANGLE
   GL_Hint
   GL_ImportMemoryFdEXT
   GL_ImportMemoryZirconHandleANGLE
@@ -774,7 +766,6 @@ EXPORTS
   GL_ReadnPixels
   GL_ReadnPixelsEXT
   GL_ReadnPixelsKHR
-  GL_ReadnPixelsRobustANGLE
   GL_ReleaseShaderCompiler
   GL_ReleaseTexturesANGLE
   GL_RenderbufferStorage
@@ -793,11 +784,9 @@ EXPORTS
   GL_SamplerParameterIiv
   GL_SamplerParameterIivEXT
   GL_SamplerParameterIivOES
-  GL_SamplerParameterIivRobustANGLE
   GL_SamplerParameterIuiv
   GL_SamplerParameterIuivEXT
   GL_SamplerParameterIuivOES
-  GL_SamplerParameterIuivRobustANGLE
   GL_SamplerParameterf
   GL_SamplerParameterfv
   GL_SamplerParameterfvRobustANGLE
@@ -853,11 +842,9 @@ EXPORTS
   GL_TexParameterIiv
   GL_TexParameterIivEXT
   GL_TexParameterIivOES
-  GL_TexParameterIivRobustANGLE
   GL_TexParameterIuiv
   GL_TexParameterIuivEXT
   GL_TexParameterIuivOES
-  GL_TexParameterIuivRobustANGLE
   GL_TexParameterf
   GL_TexParameterfv
   GL_TexParameterfvRobustANGLE
@@ -1169,6 +1156,7 @@ EXPORTS
   glEnableiOES
   glEndPerfMonitorAMD
   glEndPixelLocalStorageANGLE
+  glEndPixelLocalStorageImplicitANGLE
   glEndQuery
   glEndQueryEXT
   glEndTilingQCOM
@@ -1239,7 +1227,6 @@ EXPORTS
   glGetAttachedShaders
   glGetAttribLocation
   glGetBooleani_v
-  glGetBooleani_vRobustANGLE
   glGetBooleanv
   glGetBooleanvRobustANGLE
   glGetBufferParameteri64v
@@ -1267,11 +1254,12 @@ EXPORTS
   glGetFramebufferAttachmentParameterivRobustANGLE
   glGetFramebufferParameteriv
   glGetFramebufferParameterivMESA
-  glGetFramebufferParameterivRobustANGLE
   glGetFramebufferPixelLocalStorageParameterfvANGLE
   glGetFramebufferPixelLocalStorageParameterfvRobustANGLE
   glGetFramebufferPixelLocalStorageParameterivANGLE
   glGetFramebufferPixelLocalStorageParameterivRobustANGLE
+  glGetFramebufferPixelLocalStorageParameteruivANGLE
+  glGetFramebufferPixelLocalStorageParameteruivRobustANGLE
   glGetGraphicsResetStatus
   glGetGraphicsResetStatusEXT
   glGetGraphicsResetStatusKHR
@@ -1308,12 +1296,10 @@ EXPORTS
   glGetPointerv
   glGetPointervANGLE
   glGetPointervKHR
-  glGetPointervRobustANGLERobustANGLE
   glGetProgramBinary
   glGetProgramBinaryOES
   glGetProgramInfoLog
   glGetProgramInterfaceiv
-  glGetProgramInterfaceivRobustANGLE
   glGetProgramPipelineInfoLog
   glGetProgramPipelineInfoLogEXT
   glGetProgramPipelineiv
@@ -1344,11 +1330,9 @@ EXPORTS
   glGetSamplerParameterIiv
   glGetSamplerParameterIivEXT
   glGetSamplerParameterIivOES
-  glGetSamplerParameterIivRobustANGLE
   glGetSamplerParameterIuiv
   glGetSamplerParameterIuivEXT
   glGetSamplerParameterIuivOES
-  glGetSamplerParameterIuivRobustANGLE
   glGetSamplerParameterfv
   glGetSamplerParameterfvRobustANGLE
   glGetSamplerParameteriv
@@ -1378,11 +1362,9 @@ EXPORTS
   glGetTexParameterIiv
   glGetTexParameterIivEXT
   glGetTexParameterIivOES
-  glGetTexParameterIivRobustANGLE
   glGetTexParameterIuiv
   glGetTexParameterIuivEXT
   glGetTexParameterIuivOES
-  glGetTexParameterIuivRobustANGLE
   glGetTexParameterfv
   glGetTexParameterfvRobustANGLE
   glGetTexParameteriv
@@ -1414,14 +1396,11 @@ EXPORTS
   glGetnUniformfv
   glGetnUniformfvEXT
   glGetnUniformfvKHR
-  glGetnUniformfvRobustANGLE
   glGetnUniformiv
   glGetnUniformivEXT
   glGetnUniformivKHR
-  glGetnUniformivRobustANGLE
   glGetnUniformuiv
   glGetnUniformuivKHR
-  glGetnUniformuivRobustANGLE
   glHint
   glImportMemoryFdEXT
   glImportMemoryZirconHandleANGLE
@@ -1621,7 +1600,6 @@ EXPORTS
   glReadnPixels
   glReadnPixelsEXT
   glReadnPixelsKHR
-  glReadnPixelsRobustANGLE
   glReleaseShaderCompiler
   glReleaseTexturesANGLE
   glRenderbufferStorage
@@ -1640,11 +1618,9 @@ EXPORTS
   glSamplerParameterIiv
   glSamplerParameterIivEXT
   glSamplerParameterIivOES
-  glSamplerParameterIivRobustANGLE
   glSamplerParameterIuiv
   glSamplerParameterIuivEXT
   glSamplerParameterIuivOES
-  glSamplerParameterIuivRobustANGLE
   glSamplerParameterf
   glSamplerParameterfv
   glSamplerParameterfvRobustANGLE
@@ -1700,11 +1676,9 @@ EXPORTS
   glTexParameterIiv
   glTexParameterIivEXT
   glTexParameterIivOES
-  glTexParameterIivRobustANGLE
   glTexParameterIuiv
   glTexParameterIuivEXT
   glTexParameterIuivOES
-  glTexParameterIuivRobustANGLE
   glTexParameterf
   glTexParameterfv
   glTexParameterfvRobustANGLE
