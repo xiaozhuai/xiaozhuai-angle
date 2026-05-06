@@ -10,23 +10,19 @@ option(ANGLE_EXCLUDE_REGISTRY_HEADERS "Exclude registry headers" OFF)
 
 set(ANGLE_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/include")
 
-if(APPLE)
-    if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-        if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
-            set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/macos-arm64")
-        elseif(CMAKE_OSX_ARCHITECTURES MATCHES "x86_64")
-            set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/macos-x64")
-        else()
-            message(FATAL_ERROR "Unsupported macos architecture: ${CMAKE_OSX_ARCHITECTURES}")
-        endif()
-    elseif(CMAKE_SYSTEM_NAME STREQUAL "iOS")
-        if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
-            set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/ios-arm64")
-        else()
-            message(FATAL_ERROR "Unsupported ios architecture: ${CMAKE_OSX_ARCHITECTURES}")
-        endif()
+if(IOS)
+    if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
+        set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/ios-arm64")
     else()
-        message(FATAL_ERROR "Unsupported Apple platform: ${CMAKE_SYSTEM_NAME}")
+        message(FATAL_ERROR "Unsupported ios architecture: ${CMAKE_OSX_ARCHITECTURES}")
+    endif()
+elseif(APPLE)
+    if(CMAKE_OSX_ARCHITECTURES MATCHES "arm64")
+        set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/macos-arm64")
+    elseif(CMAKE_OSX_ARCHITECTURES MATCHES "x86_64")
+        set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/macos-x64")
+    else()
+        message(FATAL_ERROR "Unsupported macos architecture: ${CMAKE_OSX_ARCHITECTURES}")
     endif()
 elseif(WIN32)
     set(ANGLE_LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/lib/windows-x64")
@@ -39,7 +35,7 @@ target_include_directories(libEGL INTERFACE
     "$<BUILD_INTERFACE:${ANGLE_INCLUDE_DIR}>"
     "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
-if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+if(IOS)
     target_link_options(libEGL INTERFACE
         "$<BUILD_INTERFACE:-F${ANGLE_LIB_DIR}>"
         "$<INSTALL_INTERFACE:-F$<INSTALL_PREFIX>/${CMAKE_INSTALL_LIBDIR}>"
@@ -52,7 +48,7 @@ else()
 endif()
 if(WIN32)
     target_link_libraries(libEGL INTERFACE "libEGL.lib")
-elseif(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+elseif(IOS)
     target_link_libraries(libEGL INTERFACE "-framework libEGL")
 else()
     target_link_libraries(libEGL INTERFACE "EGL")
@@ -64,7 +60,7 @@ target_include_directories(libGLESv2 INTERFACE
     "$<BUILD_INTERFACE:${ANGLE_INCLUDE_DIR}>"
     "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
-if(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+if(IOS)
     target_link_options(libGLESv2 INTERFACE
         "$<BUILD_INTERFACE:-F${ANGLE_LIB_DIR}>"
         "$<INSTALL_INTERFACE:-F$<INSTALL_PREFIX>/${CMAKE_INSTALL_LIBDIR}>"
@@ -77,7 +73,7 @@ else()
 endif()
 if(WIN32)
     target_link_libraries(libGLESv2 INTERFACE "libGLESv2.lib")
-elseif(CMAKE_SYSTEM_NAME STREQUAL "iOS")
+elseif(IOS)
     target_link_libraries(libGLESv2 INTERFACE "-framework libGLESv2")
 else()
     target_link_libraries(libGLESv2 INTERFACE "GLESv2")
