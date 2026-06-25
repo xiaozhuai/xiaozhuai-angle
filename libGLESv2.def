@@ -205,15 +205,11 @@ EXPORTS
   GL_CompileShader
   GL_CompressedCopyTextureCHROMIUM
   GL_CompressedTexImage2D
-  GL_CompressedTexImage2DRobustANGLE
   GL_CompressedTexImage3D
   GL_CompressedTexImage3DOES
-  GL_CompressedTexImage3DRobustANGLE
   GL_CompressedTexSubImage2D
-  GL_CompressedTexSubImage2DRobustANGLE
   GL_CompressedTexSubImage3D
   GL_CompressedTexSubImage3DOES
-  GL_CompressedTexSubImage3DRobustANGLE
   GL_CopyBufferSubData
   GL_CopyImageSubData
   GL_CopyImageSubDataEXT
@@ -268,7 +264,6 @@ EXPORTS
   GL_DetachShader
   GL_Disable
   GL_DisableClientState
-  GL_DisableExtensionANGLE
   GL_DisableVertexAttribArray
   GL_Disablei
   GL_DisableiEXT
@@ -1039,15 +1034,11 @@ EXPORTS
   glCompileShader
   glCompressedCopyTextureCHROMIUM
   glCompressedTexImage2D
-  glCompressedTexImage2DRobustANGLE
   glCompressedTexImage3D
   glCompressedTexImage3DOES
-  glCompressedTexImage3DRobustANGLE
   glCompressedTexSubImage2D
-  glCompressedTexSubImage2DRobustANGLE
   glCompressedTexSubImage3D
   glCompressedTexSubImage3DOES
-  glCompressedTexSubImage3DRobustANGLE
   glCopyBufferSubData
   glCopyImageSubData
   glCopyImageSubDataEXT
@@ -1102,7 +1093,6 @@ EXPORTS
   glDetachShader
   glDisable
   glDisableClientState
-  glDisableExtensionANGLE
   glDisableVertexAttribArray
   glDisablei
   glDisableiEXT
